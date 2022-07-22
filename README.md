@@ -1,3 +1,6 @@
+# my-ghost-journal-theme
+Template for my blog
+
 # Journal
 
 A minimal, typography-heavy newsletter theme for [Ghost](https://github.com/TryGhost/Ghost).
