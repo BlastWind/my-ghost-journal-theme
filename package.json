@@ -43,12 +43,18 @@
         "custom": {
             "title_font": {
                 "type": "select",
-                "options": ["Modern sans-serif", "Elegant serif"],
+                "options": [
+                    "Modern sans-serif",
+                    "Elegant serif"
+                ],
                 "default": "Modern sans-serif"
             },
             "body_font": {
                 "type": "select",
-                "options": ["Modern sans-serif", "Elegant serif"],
+                "options": [
+                    "Modern sans-serif",
+                    "Elegant serif"
+                ],
                 "default": "Modern sans-serif"
             }
         }
@@ -73,5 +79,10 @@
         "postcss": "8.4.14",
         "postcss-easy-import": "4.0.0",
         "pump": "3.0.0"
-    }
+    },
+    "dependencies": {
+        "@tryghost/admin-api": "^1.13.0",
+        "node-fetch": "^3.2.9"
+    }, 
+    "type": "commonjs"
 }
