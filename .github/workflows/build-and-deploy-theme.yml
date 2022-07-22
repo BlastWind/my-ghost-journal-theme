@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Build and Deploy Theme
 
 # Controls when the workflow will run
 on:
@@ -25,6 +25,9 @@ jobs:
       # Node env setup
       - name: yarnenv set up
         run: yarn
+        
       # Run the build and deploy theme shell script
       - name: run build and deploy shell script
-        run: "${GITHUB_WORKSPACE}/scripts/build-and-deploy-theme.sh"
+        run: |
+          chmod +x "${GITHUB_WORKSPACE}/scripts/build-and-deploy-theme.sh"
+          "${GITHUB_WORKSPACE}/scripts/build-and-deploy-theme.sh"
