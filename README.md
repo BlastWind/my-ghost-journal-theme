@@ -1,6 +1,6 @@
 # my-ghost-journal-theme
-Template for my blog
-
+My ghost blog theme, based from the official ghost "Journal" theme. 
+Below is the origin readme.
 # Journal
 
 A minimal, typography-heavy newsletter theme for [Ghost](https://github.com/TryGhost/Ghost).
