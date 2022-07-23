@@ -1,5 +1,7 @@
 import GhostAdminAPI from "@tryghost/admin-api";
-console.log(process.env);
+console.log(JSON.stringify(process.env.URL));
+console.log(JSON.stringify(process.env.ADMIN_KEY));
+
 const api = new GhostAdminAPI({
   url: process.env.URL,
   key: process.env.ADMIN_KEY,
