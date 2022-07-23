@@ -24,15 +24,17 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+      - name: create env file
+        run: |
+          touch .env
+          echo ADMIN_KEY=${{ secrets.ADMIN_KEY }} >> .env
+          echo URL=${{ secrets.URL }} >> .env
       # Node env setup
       - name: yarnenv set up
         run: yarn
         
       # Run the build and deploy theme shell script
       - name: run build and deploy shell script
-        env: 
-          ADMIN_KEY: ${{ secrets.ADMIN_KEYS }}
-          URL: ${{ secrets.URL }}
         run: |
           chmod +x "${GITHUB_WORKSPACE}/scripts/build-and-deploy-theme.sh"
           "${GITHUB_WORKSPACE}/scripts/build-and-deploy-theme.sh"
