@@ -31,9 +31,6 @@ jobs:
         
       # Run the build and deploy theme shell script
       - name: run build and deploy shell script
-        env: 
-          ADMIN_KEY: ${{ secrets.ADMIN_KEYS }}
-          URL: ${{ secrets.URL }}
         run: |
           chmod +x "${GITHUB_WORKSPACE}/scripts/build-and-deploy-theme.sh"
           "${GITHUB_WORKSPACE}/scripts/build-and-deploy-theme.sh"
