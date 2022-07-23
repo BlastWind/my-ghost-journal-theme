@@ -1,4 +1,6 @@
 import GhostAdminAPI from "@tryghost/admin-api";
+import * as dotenv from "dotenv";
+dotenv.config();
 console.log(JSON.stringify(process.env.URL));
 console.log(JSON.stringify(process.env.ADMIN_KEY));
 
