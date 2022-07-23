@@ -1,0 +1,25 @@
+.gh-portal-btn-container {
+  display: none !important;
+}
+
+.gh-portal-signup-message {
+  display: none !important;
+}
+
+.gh-portal-signup-message {
+  display: none;
+}
+.gh-portal-btn-container {
+  display: none !important;
+}
+
+.gh-portal-signup-message {
+  display: none !important;
+}
+
+.gh-author-discord {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: block;
+}
