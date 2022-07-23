@@ -56,6 +56,40 @@
             </section>
 
             <aside class="gh-sidebar">
+                <section class="gh-section">
+                    <h2 class="gh-section-title">About</h2>
+
+                    <div class="gh-about">
+                        {{#if @site.icon}}
+                            <img class="gh-about-icon" src="{{@site.icon}}" alt="{{@site.title}}">
+                        {{/if}}
+
+                        <section class="gh-about-wrapper">
+                            <h3 class="gh-about-title">{{@site.title}}</h3>
+
+                            {{#if @site.description}}
+                                <p class="gh-about-description">{{@site.description}}</p>
+                            {{/if}}
+                        </section>
+                    </div>
+
+                    {{^if @member.paid}}
+                        <div class="gh-signup">
+                            {{^if @member}}
+                                <a class="gh-subscribe-input" href="#/portal/signup" data-portal="signup">
+                                    <div class="gh-subscribe-input-text">
+                                        {{> icons/email}}
+                                        melody@example.com
+                                    </div>
+                                    <div class="gh-subscribe-input-btn">Subscribe</div>
+                                </a>
+                            {{else}}
+                                <p class="gh-signup-description">Upgrade to a paid account to get full access.</p>
+                                <a class="gh-signup-btn gh-btn gh-primary-btn" href="#/portal/account/plans" data-portal="account/plans">Upgrade now</a>
+                            {{/if}}
+                        </div>
+                    {{/if}}
+                </section>
 
                 {{#get "posts" filter="featured:true" limit="all" as |featured|}}
                     {{#if featured}}
