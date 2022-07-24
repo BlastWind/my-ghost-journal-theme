@@ -23,3 +23,12 @@
   cursor: pointer;
   display: block;
 }
+
+.center {
+  margin: auto;
+}
+
+.gh-foot-menu {
+  display: flex !important;
+  justify-content: center !important;
+}
