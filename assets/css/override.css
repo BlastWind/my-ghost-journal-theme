@@ -31,4 +31,20 @@
 .gh-foot-menu {
   display: flex !important;
   justify-content: center !important;
+  gap:24px;
+}
+
+.gh-article-header.gh-canvas {
+  /* a bit longer than usual, for the title */
+  grid-template-columns: [full-start] minmax(var(--gap), auto) [wide-start] minmax(
+      auto,
+      240px
+    ) [main-start] min(
+      var(--content-width, 1000px),
+      calc(100% - var(--gap) * 2)
+    ) [main-end] minmax(auto, 240px) [wide-end] minmax(var(--gap), auto) [full-end];
+}
+
+.gh-article-excerpt {
+  max-width: none;
 }
